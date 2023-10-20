@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">JarvisHome</string>
+    <string name="barcode_search">Búsqueda por código de barras</string>
+    <string name="common_accept">Aceptar</string>
+    <string name="common_cancel">Cancelar</string>
+    <string name="common_permission_no_accepted">Debes aceptar los permisos</string>
+    <string name="common_error_network">Error de red</string>
+</resources>
