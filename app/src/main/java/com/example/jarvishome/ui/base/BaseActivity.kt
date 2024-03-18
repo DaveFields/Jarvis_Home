@@ -1,7 +1,6 @@
 package com.example.jarvishome.ui.base
 
-import android.content.Context
-import android.content.ContextWrapper
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.jarvishome.R
@@ -30,8 +29,10 @@ open class BaseActivity: AppCompatActivity() {
     }
     private fun observeEvent(event: BaseEvent) {
         when (event) {
-            is BaseEvent.ShowMessage -> Toast.makeText(this, event.message, Toast.LENGTH_LONG).show()
-            is ShowLoading -> baseProgressBar.setVisible(event.visibility)
+            is ShowMessage -> Toast.makeText(this, event.message, Toast.LENGTH_LONG).show()
+            is ShowLoading -> {
+                Log.d("BaseActivity", "ShowLoading")
+                baseProgressBar.setVisible(event.visibility)}
             //is GoToLoginAfterUnauthorized -> startActivity(MainAuthActivity.newIntent(this))
             //is GoToLogin -> startActivity(MainAuthActivity.newIntent(this))
             else -> {}

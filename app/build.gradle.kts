@@ -47,7 +47,7 @@ dependencies {
     val camerax_version = "1.0.0-rc01"
     val camerax_view_version = "1.0.0-alpha20"
     val mlkit_version = "18.3.0"
-
+    val moshiVersion = "1.15.0"
 
     implementation("androidx.core:core-ktx:1.10.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
@@ -59,7 +59,7 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.7.2")
     implementation("androidx.databinding:databinding-ktx:8.1.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    //implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation ("com.squareup.okhttp3:logging-interceptor:4.11.0")
 
@@ -88,6 +88,11 @@ dependencies {
     //EventBus
     implementation("org.greenrobot:eventbus:3.3.1")
 
+    /*Moshi*/
+    implementation("com.squareup.moshi:moshi:$moshiVersion")
+    kapt("com.squareup.moshi:moshi-kotlin-codegen:$moshiVersion")
+    implementation("com.squareup.retrofit2:converter-moshi:2.9.0")
+
     //Barcode
     implementation("com.google.mlkit:barcode-scanning:17.2.0")
     implementation ("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.0")
@@ -96,6 +101,15 @@ dependencies {
     implementation ("androidx.camera:camera-lifecycle:${camerax_version}")
     implementation ("androidx.camera:camera-view:${camerax_view_version}")
     implementation ("com.google.android.gms:play-services-mlkit-barcode-scanning:${mlkit_version}")
+
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.16.0")
+
+    //Lottie
+    implementation ("com.airbnb.android:lottie:6.4.0")
+
+
 }
 // Allow references to generated code
 kapt {

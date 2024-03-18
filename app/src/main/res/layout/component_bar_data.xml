@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_8"
+        android:layout_marginVertical="@dimen/margin_10">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_pb_carbo"
+            android:layout_width="@dimen/image_100"
+            android:layout_height="@dimen/image_100"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="10dp"
+            android:elevation="@dimen/cardview_default_elevation"
+            app:cardCornerRadius="@dimen/margin_20"
+            android:background="@color/cardview_shadow_start_color">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pb_percent"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="@color/background6"
+                    app:layout_constraintHeight_percent="0.5" />
+                <TextView
+                    android:id="@+id/percent_bar"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    style="@style/InfoBarTextStyle"
+                    tools:text="65%"
+                    android:background="@android:color/transparent"
+                    android:elevation="@dimen/cardview_default_elevation"
+                    android:textSize="@dimen/text_medium"
+                    android:textColor="@color/white"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/tv_tittle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/cv_pb_carbo"
+            app:layout_constraintEnd_toEndOf="@id/cv_pb_carbo"
+            app:layout_constraintTop_toBottomOf="@id/cv_pb_carbo"
+            android:layout_marginTop="@dimen/margin_8"
+            style="@style/TittleBarTextStyle"
+            tools:text="Carbohidratos"
+            android:lines="1"
+            android:background="@android:color/transparent"
+            android:elevation="@dimen/cardview_default_elevation" />
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/cv_pb_carbo"
+            app:layout_constraintEnd_toEndOf="@id/cv_pb_carbo"
+            app:layout_constraintTop_toBottomOf="@id/tv_tittle"
+            android:layout_marginTop="@dimen/margin_4"
+            tools:text="65gr"
+            style="@style/InfoBarTextStyle"
+            android:background="@android:color/transparent"
+            android:elevation="@dimen/cardview_default_elevation" />
+</androidx.constraintlayout.widget.ConstraintLayout>

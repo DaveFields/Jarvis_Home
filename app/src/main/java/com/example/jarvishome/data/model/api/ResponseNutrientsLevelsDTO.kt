@@ -1,6 +1,5 @@
 package com.example.jarvishome.data.model.api
 
-import com.google.gson.annotations.SerializedName
 
 data class ResponseNutrientsLevelsDTO(
     //val fat: String,

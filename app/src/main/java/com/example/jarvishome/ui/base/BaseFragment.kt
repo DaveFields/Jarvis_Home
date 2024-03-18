@@ -1,5 +1,6 @@
 package com.example.jarvishome.ui.base
 
+import android.util.Log
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.jarvishome.ui.base.BaseEvent.*
@@ -26,11 +27,17 @@ open class BaseFragment : Fragment() {
 
     private fun observeEvent(event: BaseEvent) {
         when(event) {
-            is ShowMessage -> context?.let { context ->  Toast.makeText(context, event.message, Toast.LENGTH_LONG).show() }
-            is ShowLoading -> baseProgressBar.setVisible(event.visibility)
+            is ShowMessage -> context?.let { context ->
+                Toast.makeText(context, event.message, Toast.LENGTH_LONG).show()
+            }
+            is ShowLoading -> {
+                Log.d("BaseFragment", "ShowLoading")
+                baseProgressBar.setVisible(event.visibility)
+            }
             //is GoToLoginAfterUnauthorized -> activity?.let { activity-> startActivity(MainAuthActivity.newIntent(activity))}
             //is GoToLogin -> activity?.let { activity-> startActivity(MainAuthActivity.newIntent(activity))}
             is ShowToast -> TODO()
+            else -> {}
         }
     }
 }

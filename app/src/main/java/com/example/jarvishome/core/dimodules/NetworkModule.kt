@@ -8,7 +8,7 @@ import dagger.hilt.components.SingletonComponent
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 // @Module informs Dagger that this class is a Dagger Module
@@ -20,8 +20,8 @@ object NetworkModule {
     @Provides
     fun provideRetrofitService():Retrofit{
         return Retrofit.Builder()
-            .baseUrl("https://world.openfoodfacts.net/api/v2/")
-            .addConverterFactory(GsonConverterFactory.create())
+            .baseUrl("https://world.openfoodfacts.org/api/v2/")//.net (PRE)
+            .addConverterFactory(MoshiConverterFactory.create())
             .client(getClient())
             .build()
     }

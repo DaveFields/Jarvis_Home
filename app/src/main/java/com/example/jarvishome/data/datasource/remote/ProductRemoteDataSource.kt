@@ -1,5 +1,6 @@
 package com.example.jarvishome.data.datasource.remote
 
+import android.util.Log
 import com.example.jarvishome.core.network.remote.services.OpenFoodFactsService
 import com.example.jarvishome.data.base.BaseDataSource
 import com.example.jarvishome.data.datasource.interfaces.ProductDataSource
@@ -17,6 +18,7 @@ class ProductRemoteDataSource @Inject constructor(
     private var body = "nutriments,nutriscore_data,images,selected_images,ecoscore_score,ingredients,ingredients_analysis_tags,ingredients_text,nutrient_levels,traces_hierarchy"
 
     override suspend fun getProduct(productId: String): Resource<Product> = safeApiCall(
-        ProductApiMapper()) { productService.getProductBarcode(productId, body) }
+        ProductApiMapper())
+    { productService.getProductBarcode(productId, body) }
 
 }

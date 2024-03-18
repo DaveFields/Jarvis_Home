@@ -1,7 +1,18 @@
 package com.example.jarvishome.domain.model
 
-import com.example.jarvishome.data.model.api.ResponseProductDTO
+import com.squareup.moshi.JsonClass
 
+@JsonClass(generateAdapter = true)
 data class Product(
-    val code: Long
-)
+    val code: String,
+    val ecoscore_score: Int,
+    val nutriments: Nutriments,
+    val images: SelectedImages
+){
+    constructor() : this(
+        "",
+        -1,
+        Nutriments(),
+        SelectedImages()
+    )
+}

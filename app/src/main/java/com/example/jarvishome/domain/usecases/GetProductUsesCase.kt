@@ -14,7 +14,9 @@ class GetProductUsesCase @Inject constructor(
                 //userLocalDataSource.saveUser(response.value)
                 response
             }
-            is Resource.Failure -> response
+            is Resource.Failure -> {
+                response
+            }
         }
     }
 }

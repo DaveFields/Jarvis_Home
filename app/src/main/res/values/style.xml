@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MiBottomSheetStyle" parent="@style/Widget.Design.BottomSheet.Modal">
+        <!-- Personaliza las propiedades del estilo según sea necesario -->
+        <item name="android:background">?attr/colorSecondary</item>
+        <item name="android:padding">16dp</item>
+        <!-- Otros atributos -->
+    </style>
+    <style name="BarDataStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:indeterminate">true</item>
+    </style>
+    <style name="TabFont" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/architects_daughter</item>
+        <item name="android:textSize">20sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <!-- Estilo para TextView de información -->
+    <style name="InfoTextStyleBig">
+        <item name="android:textSize">33sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/architects_daughter</item>
+    </style>
+    <!-- Estilo para Button de información -->
+    <style name="ButtonTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/architects_daughter</item>
+    </style>
+    <!-- Estilo para TextView de información -->
+    <style name="InfoTextStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/architects_daughter</item>
+    </style>
+    <!-- Estilo para Text de TabBar -->
+    <style name="TabTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/architects_daughter</item>
+    </style>
+    <!-- Estilo para BarData de información estilo para BarData de información -->
+    <style name="InfoBarTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/darker_gray</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/architects_daughter</item>
+    </style>
+    <!-- Estilo para TittleBarTextStyle de titulo -->
+    <style name="TittleBarTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/architects_daughter</item>
+    </style>
+</resources>

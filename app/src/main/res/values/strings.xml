@@ -5,4 +5,14 @@
     <string name="common_cancel">Cancelar</string>
     <string name="common_permission_no_accepted">Debes aceptar los permisos</string>
     <string name="common_error_network">Error de red</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_shop">Compra</string>
+    <string name="menu_cook">Cocina</string>
+    <string name="menu_pantry">Despensa</string>
+    <string name="carbo">Carbohidratos</string>
+    <string name="fat">Grasas</string>
+    <string name="protein">Proteína</string>
+    <string name="total_calories">Total calorías: </string>
+    <string name="add">Añadir</string>
+    <string name="add_product">Añade Producto a cesta</string>
 </resources>

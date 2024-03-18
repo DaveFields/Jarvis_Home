@@ -1,5 +1,6 @@
 package com.example.jarvishome.core.network.base
 
+import android.util.Log
 import com.example.jarvishome.data.base.Mapper
 import com.example.jarvishome.domain.base.FailureError
 import com.example.jarvishome.domain.base.Resource
@@ -19,6 +20,7 @@ interface SafeApiCall {
               Resource.Success(model)
           }
           catch (throwable:Throwable){
+              Log.d("throwable",throwable.message.toString())
               handle(throwable)
           }
       }

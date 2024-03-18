@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background">
+    android:background="?attr/colorPrimary">
     <androidx.camera.view.PreviewView
         android:id="@+id/cameraView"
         android:visibility="gone"
@@ -13,8 +13,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="20dp"
-        android:layout_width="250dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
         android:layout_height="250dp"/>
+    <GridLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:columnCount="2"
+        android:rowCount="1"
+        android:padding="16dp">
+        <ImageView
+            android:id="@+id/ic_despensa"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:src="@drawable/ic_barbecue"
+            android:scaleType="fitCenter"
+            android:layout_margin="8dp"
+            android:clickable="true"
+            android:onClick="onImage1Clicked" />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_columnWeight="1"
+        android:layout_rowWeight="1"
+        android:src="@drawable/ic_chef"
+        android:scaleType="fitCenter"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:onClick="onImage2Clicked" />
+    </GridLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/search_barcode"
@@ -27,15 +61,5 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/barcode_search" />
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/cl_bottom_sheet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <include
-            android:id="@+id/ly_bottom_sheet"
-            layout="@layout/fragment_info_product" />
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

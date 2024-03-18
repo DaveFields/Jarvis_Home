@@ -8,6 +8,23 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FFFF00</color>
-    <color name="background">#004149</color>
+
+    <color name="protein">#FF968A</color>
+    <color name="protein_info">#EB5F4F</color>
+    <color name="carbohydrates">#CCE2CB</color>
+    <color name="carbohydrates_info">#9ABF99</color>
+    <color name="fat">#F7E5B7</color>
+    <color name="fat_info">#FFE4B5</color>
+
+    <color name="green">#00bb2d</color>
+    <color name="positive_actions">#0b673c</color>
+
+    <color name="beautyText">#004149</color>
+    <color name="background_second">#6E7B8F</color>
+    <color name="background_extra">#445A67</color>
+    <color name="background3">#57838D</color>
+    <color name="background4">#B4C9C7</color>
+    <color name="background5">#D7E2EA</color>
+    <color name="background6">#96B3C2</color>
 
 </resources>
